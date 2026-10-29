@@ -1620,31 +1620,23 @@
 
     .pgrid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(12px, 4vw, 34px);
       align-items: start;
-      position: relative;
-      max-width: 320px;
-      margin: 0 auto;
-    }
-
-    .pc:nth-child(1) {
-      order: 1;
-      margin: 0 auto;
-      width: 100%;
+      position: relative
     }
 
     .pgrid::after {
       content: "&";
-      order: 2;
-      position: static;
-      margin: -6px auto;
+      position: absolute;
+      left: 50%;
+      top: 38%;
+      transform: translate(-50%, -50%);
       z-index: 3;
       font-family: var(--f-display);
       font-style: italic;
-      font-size: 2.2rem;
-      width: 54px;
-      height: 54px;
+      font-size: clamp(1.6rem, 7vw, 2.6rem);
+      width: clamp(46px, 12vw, 66px);
       aspect-ratio: 1;
       display: grid;
       place-items: center;
@@ -1652,43 +1644,16 @@
       background: var(--maroon);
       color: var(--gold-hi);
       border: 2px solid var(--gold);
-      box-shadow: 0 0 0 5px var(--ivory), 0 8px 22px rgba(79, 12, 24, .35);
-    }
-
-    .pc:nth-child(2) {
-      order: 3;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    @media (min-width: 620px) {
-      .pgrid {
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(16px, 4vw, 36px);
-        max-width: 680px;
-      }
-      .pc:nth-child(1) {
-        order: unset;
-        margin: 0;
-      }
-      .pc:nth-child(2) {
-        order: unset;
-        margin-top: 34px;
-      }
-      .pgrid::after {
-        order: unset;
-        position: absolute;
-        left: 50%;
-        top: 38%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        width: clamp(48px, 12vw, 66px);
-        height: auto;
-      }
+      box-shadow: 0 0 0 5px var(--ivory), 0 8px 22px rgba(79, 12, 24, .35)
     }
 
     .pc {
-      position: relative;
+      margin: 0;
+      position: relative
+    }
+
+    .pc:nth-child(2) {
+      margin-top: 34px
     }
 
     .arch {
@@ -1697,9 +1662,7 @@
       border-radius: 999px 999px 14px 14px;
       background: linear-gradient(135deg, #b8862b, #f6dc94 30%, #c79a3b 55%, #f6dc94 78%, #b8862b);
       box-shadow: 0 18px 40px -12px rgba(79, 12, 24, .55), 0 2px 0 rgba(255, 255, 255, .5) inset;
-      transition: transform .5s ease;
-      max-width: 300px;
-      margin: 0 auto;
+      transition: transform .5s ease
     }
 
     .arch::before {
@@ -1716,7 +1679,7 @@
       width: 100%;
       aspect-ratio: 4/5;
       object-fit: cover;
-      object-position: 50% 16%;
+      object-position: 50% 18%;
       border-radius: 999px 999px 8px 8px;
       border: 3px solid var(--ivory)
     }
@@ -2038,9 +2001,9 @@
         </div>
         <h1 class="shubho gold-text nm" style="--n:2">শুভ বিবাহ</h1>
         <p class="shubho-en nm" style="--n:2">Shubho Bibaho</p>
-        <div class="duo nm" style="--n:2.6"><span class="duo-avatar"><img src="boy.png" alt="Aviram Nath" width="150"
+        <div class="duo nm" style="--n:2.6"><span class="duo-avatar"><img src="boy.webp" alt="Aviram Nath" width="150"
               height="150"></span><span class="hrt" aria-hidden="true">♥</span><span class="duo-avatar"><img
-              src="girl.png" alt="Monalisa Debnath" width="150" height="150"></span></div>
+              src="girl.webp" alt="Monalisa Debnath" width="150" height="150"></span></div>
         <p class="names">
           <span class="nm" style="--n:3">
             <span class="first gold-text">Aviram</span>
@@ -2072,14 +2035,14 @@
       </div>
       <div class="pgrid rv">
         <figure class="pc">
-          <div class="arch"><img src="boy.png" data-k="g"
+          <div class="arch"><img src="boy.webp" data-k="g"
               alt="Portrait of Aviram Nath in a cream and gold sherwani with a red shawl" width="860" height="1032"
               loading="lazy"></div>
           <figcaption><span class="role">বর · The Groom</span><span class="pn">Aviram</span><span class="pb">অভিরাম
               নাথ</span><i class="orn"></i></figcaption>
         </figure>
         <figure class="pc">
-          <div class="arch"><img src="girl.png" data-k="b"
+          <div class="arch"><img src="girl.webp" data-k="b"
               alt="Portrait of Monalisa Debnath in a red and cream Bengali saree with jasmine flowers" width="860"
               height="1032" loading="lazy"></div>
           <figcaption><span class="role">কনে · The Bride</span><span class="pn">Monalisa</span><span class="pb">মোনালিসা
@@ -2159,7 +2122,7 @@
             <article class="card-col card-col--groom">
               <div class="card-col-top">
                 <div class="card-avatar-frame">
-                  <img src="boy.png" alt="Aviram Nath" class="card-avatar" width="64" height="64" loading="lazy">
+                  <img src="boy.webp" alt="Aviram Nath" class="card-avatar" width="64" height="64" loading="lazy">
                 </div>
                 <div class="card-col-info">
                   <span class="card-badge">
@@ -2308,7 +2271,7 @@
             <article class="card-col card-col--bride">
               <div class="card-col-top">
                 <div class="card-avatar-frame">
-                  <img src="girl.png" alt="Monalisa Debnath" class="card-avatar" width="64" height="64" loading="lazy">
+                  <img src="girl.webp" alt="Monalisa Debnath" class="card-avatar" width="64" height="64" loading="lazy">
                 </div>
                 <div class="card-col-info">
                   <span class="card-badge">
