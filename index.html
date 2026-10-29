@@ -721,340 +721,394 @@
     }
 
     /* ---------- authentic bengali wedding card: পরিচিতি (The Lineage) ---------- */
-.parichiti-section {
-  margin: 38px auto 8px;
-  max-width: 760px;
-  text-align: left;
-}
-.bengali-card {
-  position: relative;
-  background: #fffdf8;
-  border: 2px solid var(--gold);
-  border-radius: 8px;
-  padding: 34px 22px 28px;
-  box-shadow: 0 16px 42px rgba(79, 12, 24, 0.10);
-  color: var(--ink);
-  overflow: hidden;
-}
-/* Double decorative border matching printed Bengali wedding invitations */
-.bengali-card::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1px solid rgba(140, 22, 40, 0.45);
-  border-radius: 6px;
-  pointer-events: none;
-}
-.bengali-card::after {
-  content: "";
-  position: absolute;
-  inset: 9px;
-  border: 1px dashed rgba(199, 154, 59, 0.45);
-  border-radius: 4px;
-  pointer-events: none;
-}
+    .parichiti-section {
+      margin: 38px auto 8px;
+      max-width: 760px;
+      text-align: left;
+    }
 
-/* Corner Alpana & Paisley Flourishes */
-.bengali-card .card-corner {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  pointer-events: none;
-  z-index: 2;
-  color: var(--gold);
-}
-.bengali-card .corner-tl { top: 12px; left: 12px; }
-.bengali-card .corner-tr { top: 12px; right: 12px; transform: scaleX(-1); }
-.bengali-card .corner-bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
-.bengali-card .corner-br { bottom: 12px; right: 12px; transform: scale(-1, -1); }
+    .bengali-card {
+      position: relative;
+      background: #fffdf8;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      padding: 34px 22px 28px;
+      box-shadow: 0 16px 42px rgba(79, 12, 24, 0.10);
+      color: var(--ink);
+      overflow: hidden;
+    }
 
-/* Card Header */
-.bengali-card-header {
-  text-align: center;
-  position: relative;
-  z-index: 3;
-  margin-bottom: 24px;
-}
-.bengali-card-blessing {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--f-bn);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--sindoor);
-  letter-spacing: 0.06em;
-  margin-bottom: 5px;
-}
-.bengali-card-blessing svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-.bengali-card-title {
-  font-family: var(--f-bn);
-  font-size: clamp(2.1rem, 5.8vw, 2.75rem);
-  font-weight: 700;
-  color: #7d1223;
-  margin: 0;
-  line-height: 1.22;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 1px rgba(199, 154, 59, 0.3);
-}
-.bengali-card-subtitle {
-  font-family: var(--f-display);
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--gold);
-  margin: 3px 0 0;
-  letter-spacing: 0.04em;
-}
+    /* Double decorative border matching printed Bengali wedding invitations */
+    .bengali-card::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(140, 22, 40, 0.45);
+      border-radius: 6px;
+      pointer-events: none;
+    }
 
-/* Card Body Layout */
-.bengali-card-body {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 22px;
-}
-@media (min-width: 670px) {
-  .bengali-card-body {
-    grid-template-columns: 1fr auto 1fr;
-    gap: 14px;
-    align-items: start;
-  }
-}
+    .bengali-card::after {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border: 1px dashed rgba(199, 154, 59, 0.45);
+      border-radius: 4px;
+      pointer-events: none;
+    }
 
-/* Central Hanging Swastika Divider */
-.card-center-divider {
-  display: none;
-}
-@media (min-width: 670px) {
-  .card-center-divider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 6px;
-    width: 64px;
-    flex-shrink: 0;
-  }
-  .card-center-divider svg {
-    width: 60px;
-    height: 230px;
-  }
-}
+    /* Corner Alpana & Paisley Flourishes */
+    .bengali-card .card-corner {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+      z-index: 2;
+      color: var(--gold);
+    }
 
-/* Mobile Divider between columns */
-.card-mobile-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 6px 0;
-  color: var(--gold);
-}
-.card-mobile-divider::before,
-.card-mobile-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(140, 22, 40, 0.35), transparent);
-}
-.card-mobile-divider svg {
-  width: 34px;
-  height: 34px;
-}
-@media (min-width: 670px) {
-  .card-mobile-divider {
-    display: none;
-  }
-}
+    .bengali-card .corner-tl {
+      top: 12px;
+      left: 12px;
+    }
 
-/* Columns */
-.card-col {
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(199, 154, 59, 0.32);
-  border-radius: 6px;
-  padding: 18px 16px 16px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-.card-col:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79, 12, 24, 0.08);
-}
-.card-col-top {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(199, 154, 59, 0.25);
-}
-.card-avatar-frame {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  padding: 2.5px;
-  background: linear-gradient(135deg, var(--gold), var(--sindoor), var(--gold-hi));
-  box-shadow: 0 4px 12px rgba(79, 12, 24, 0.16);
-  flex-shrink: 0;
-}
-.card-avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 18%;
-  display: block;
-  border: 1.5px solid #fff;
-}
-.card-col-info {
-  flex: 1;
-  min-width: 0;
-}
-.card-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 3px 12px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--maroon), var(--maroon-2));
-  color: var(--gold-hi);
-  font-family: var(--f-ui);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  border: 1px solid var(--gold);
-  box-shadow: 0 2px 6px rgba(79, 12, 24, 0.15);
-}
-.card-badge svg {
-  width: 13px;
-  height: 13px;
-  fill: var(--gold-hi);
-  flex-shrink: 0;
-}
-.card-col-heading {
-  font-family: var(--f-bn);
-  font-size: 1.22rem;
-  font-weight: 700;
-  color: #7d1223;
-  margin: 4px 0 0;
-  line-height: 1.25;
-}
+    .bengali-card .corner-tr {
+      top: 12px;
+      right: 12px;
+      transform: scaleX(-1);
+    }
 
-/* Aligned Key-Value Table (Traditional letterpress print style) */
-.card-parichiti-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 7px;
-  font-family: var(--f-bn);
-  line-height: 1.44;
-}
-.card-parichiti-table td {
-  padding: 0;
-  vertical-align: top;
-}
-.card-lbl {
-  width: 44px;
-  font-weight: 700;
-  color: #7d1223;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-}
-.card-sep {
-  width: 14px;
-  text-align: center;
-  font-weight: 700;
-  color: #7d1223;
-  font-size: 1.1rem;
-  padding: 0 6px 0 2px !important;
-}
-.card-val {
-  color: #2c0a11;
-  font-size: 1.05rem;
-}
-.card-val-name {
-  font-weight: 600;
-  color: #6e101f;
-  font-size: 1.12rem;
-}
-.card-val-sub {
-  font-family: var(--f-display);
-  font-style: italic;
-  font-size: 0.94rem;
-  color: #7d5940;
-  display: block;
-  margin-top: 1px;
-}
-.card-addr-lines {
-  font-size: 0.94rem;
-  line-height: 1.52;
-  color: #331119;
-}
-.card-addr-lines b {
-  color: #6e101f;
-  font-weight: 600;
-}
-.card-addr-en {
-  font-family: var(--f-ui);
-  font-size: 0.73rem;
-  color: #6b5042;
-  margin-top: 6px;
-  line-height: 1.4;
-  border-top: 1px dashed rgba(199, 154, 59, 0.3);
-  padding-top: 5px;
-}
+    .bengali-card .corner-bl {
+      bottom: 12px;
+      left: 12px;
+      transform: scaleY(-1);
+    }
 
-/* Action Buttons */
-.card-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-.card-btn {
-  font-family: var(--f-ui);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 500;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 7px 11px;
-  border-radius: 4px;
-  border: 1.2px solid var(--sindoor);
-  background: transparent;
-  color: var(--sindoor);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.card-btn:hover {
-  background: var(--sindoor);
-  color: var(--ivory);
-}
-.card-btn svg {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-}
-.card-btn--gold {
-  border-color: var(--gold);
-  color: #7b5816;
-}
-.card-btn--gold:hover {
-  background: var(--gold);
-  color: var(--ivory);
-}
+    .bengali-card .corner-br {
+      bottom: 12px;
+      right: 12px;
+      transform: scale(-1, -1);
+    }
 
-.copy-toast {
+    /* Card Header */
+    .bengali-card-header {
+      text-align: center;
+      position: relative;
+      z-index: 3;
+      margin-bottom: 24px;
+    }
+
+    .bengali-card-blessing {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--f-bn);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--sindoor);
+      letter-spacing: 0.06em;
+      margin-bottom: 5px;
+    }
+
+    .bengali-card-blessing svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .bengali-card-title {
+      font-family: var(--f-bn);
+      font-size: clamp(2.1rem, 5.8vw, 2.75rem);
+      font-weight: 700;
+      color: #7d1223;
+      margin: 0;
+      line-height: 1.22;
+      letter-spacing: 0.08em;
+      text-shadow: 0 1px 1px rgba(199, 154, 59, 0.3);
+    }
+
+    .bengali-card-subtitle {
+      font-family: var(--f-display);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 3px 0 0;
+      letter-spacing: 0.04em;
+    }
+
+    /* Card Body Layout */
+    .bengali-card-body {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    @media (min-width: 670px) {
+      .bengali-card-body {
+        grid-template-columns: 1fr auto 1fr;
+        gap: 14px;
+        align-items: start;
+      }
+    }
+
+    /* Central Hanging Swastika Divider */
+    .card-center-divider {
+      display: none;
+    }
+
+    @media (min-width: 670px) {
+      .card-center-divider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 6px;
+        width: 64px;
+        flex-shrink: 0;
+      }
+
+      .card-center-divider svg {
+        width: 60px;
+        height: 230px;
+      }
+    }
+
+    /* Mobile Divider between columns */
+    .card-mobile-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 6px 0;
+      color: var(--gold);
+    }
+
+    .card-mobile-divider::before,
+    .card-mobile-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(140, 22, 40, 0.35), transparent);
+    }
+
+    .card-mobile-divider svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    @media (min-width: 670px) {
+      .card-mobile-divider {
+        display: none;
+      }
+    }
+
+    /* Columns */
+    .card-col {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(199, 154, 59, 0.32);
+      border-radius: 6px;
+      padding: 18px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .card-col:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(79, 12, 24, 0.08);
+    }
+
+    .card-col-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(199, 154, 59, 0.25);
+    }
+
+    .card-avatar-frame {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      padding: 2.5px;
+      background: linear-gradient(135deg, var(--gold), var(--sindoor), var(--gold-hi));
+      box-shadow: 0 4px 12px rgba(79, 12, 24, 0.16);
+      flex-shrink: 0;
+    }
+
+    .card-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      display: block;
+      border: 1.5px solid #fff;
+    }
+
+    .card-col-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-2));
+      color: var(--gold-hi);
+      font-family: var(--f-ui);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border: 1px solid var(--gold);
+      box-shadow: 0 2px 6px rgba(79, 12, 24, 0.15);
+    }
+
+    .card-badge svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--gold-hi);
+      flex-shrink: 0;
+    }
+
+    .card-col-heading {
+      font-family: var(--f-bn);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #7d1223;
+      margin: 4px 0 0;
+      line-height: 1.25;
+    }
+
+    /* Aligned Key-Value Table (Traditional letterpress print style) */
+    .card-parichiti-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 7px;
+      font-family: var(--f-bn);
+      line-height: 1.44;
+    }
+
+    .card-parichiti-table td {
+      padding: 0;
+      vertical-align: top;
+    }
+
+    .card-lbl {
+      width: 44px;
+      font-weight: 700;
+      color: #7d1223;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .card-sep {
+      width: 14px;
+      text-align: center;
+      font-weight: 700;
+      color: #7d1223;
+      font-size: 1.1rem;
+      padding: 0 6px 0 2px !important;
+    }
+
+    .card-val {
+      color: #2c0a11;
+      font-size: 1.05rem;
+    }
+
+    .card-val-name {
+      font-weight: 600;
+      color: #6e101f;
+      font-size: 1.12rem;
+    }
+
+    .card-val-sub {
+      font-family: var(--f-display);
+      font-style: italic;
+      font-size: 0.94rem;
+      color: #7d5940;
+      display: block;
+      margin-top: 1px;
+    }
+
+    .card-addr-lines {
+      font-size: 0.94rem;
+      line-height: 1.52;
+      color: #331119;
+    }
+
+    .card-addr-lines b {
+      color: #6e101f;
+      font-weight: 600;
+    }
+
+    .card-addr-en {
+      font-family: var(--f-ui);
+      font-size: 0.73rem;
+      color: #6b5042;
+      margin-top: 6px;
+      line-height: 1.4;
+      border-top: 1px dashed rgba(199, 154, 59, 0.3);
+      padding-top: 5px;
+    }
+
+    /* Action Buttons */
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .card-btn {
+      font-family: var(--f-ui);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 11px;
+      border-radius: 4px;
+      border: 1.2px solid var(--sindoor);
+      background: transparent;
+      color: var(--sindoor);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .card-btn:hover {
+      background: var(--sindoor);
+      color: var(--ivory);
+    }
+
+    .card-btn svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .card-btn--gold {
+      border-color: var(--gold);
+      color: #7b5816;
+    }
+
+    .card-btn--gold:hover {
+      background: var(--gold);
+      color: var(--ivory);
+    }
+
+    .copy-toast {
       position: fixed;
       bottom: 24px;
       left: 50%;
@@ -1947,7 +2001,9 @@
         </div>
         <h1 class="shubho gold-text nm" style="--n:2">শুভ বিবাহ</h1>
         <p class="shubho-en nm" style="--n:2">Shubho Bibaho</p>
-        <div class="duo nm" style="--n:2.6"><span class="duo-avatar"><img src="boy.png" alt="Aviram Nath" width="150" height="150"></span><span class="hrt" aria-hidden="true">♥</span><span class="duo-avatar"><img src="girl.png" alt="Monalisa Debnath" width="150" height="150"></span></div>
+        <div class="duo nm" style="--n:2.6"><span class="duo-avatar"><img src="boy.png" alt="Aviram Nath" width="150"
+              height="150"></span><span class="hrt" aria-hidden="true">♥</span><span class="duo-avatar"><img
+              src="girl.png" alt="Monalisa Debnath" width="150" height="150"></span></div>
         <p class="names">
           <span class="nm" style="--n:3">
             <span class="first gold-text">Aviram</span>
@@ -2012,266 +2068,294 @@
         <div class="divider" aria-hidden="true"><svg class="med" viewBox="-60 -28 120 56"></svg></div>
       </div>
 
-          <!-- ============ THE COUPLE & FAMILIES (॥ পরিচিতি ॥) ============ -->
-    <div class="rv parichiti-section" id="parichiti">
-      <div class="bengali-card">
-        <!-- Corner Alpana Flourishes -->
-        <svg class="card-corner corner-tl" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
-          <circle cx="14" cy="14" r="2.5" fill="#c79a3b"/>
-          <circle cx="6" cy="6" r="2" fill="#8c1628"/>
-        </svg>
-        <svg class="card-corner corner-tr" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
-          <circle cx="14" cy="14" r="2.5" fill="#c79a3b"/>
-          <circle cx="6" cy="6" r="2" fill="#8c1628"/>
-        </svg>
-        <svg class="card-corner corner-bl" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
-          <circle cx="14" cy="14" r="2.5" fill="#c79a3b"/>
-          <circle cx="6" cy="6" r="2" fill="#8c1628"/>
-        </svg>
-        <svg class="card-corner corner-br" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
-          <circle cx="14" cy="14" r="2.5" fill="#c79a3b"/>
-          <circle cx="6" cy="6" r="2" fill="#8c1628"/>
-        </svg>
+      <!-- ============ THE COUPLE & FAMILIES (॥ পরিচিতি ॥) ============ -->
+      <div class="rv parichiti-section" id="parichiti">
+        <div class="bengali-card">
+          <!-- Corner Alpana Flourishes -->
+          <svg class="card-corner corner-tl" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round"
+              stroke-dasharray="2 2" />
+            <circle cx="14" cy="14" r="2.5" fill="#c79a3b" />
+            <circle cx="6" cy="6" r="2" fill="#8c1628" />
+          </svg>
+          <svg class="card-corner corner-tr" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round"
+              stroke-dasharray="2 2" />
+            <circle cx="14" cy="14" r="2.5" fill="#c79a3b" />
+            <circle cx="6" cy="6" r="2" fill="#8c1628" />
+          </svg>
+          <svg class="card-corner corner-bl" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round"
+              stroke-dasharray="2 2" />
+            <circle cx="14" cy="14" r="2.5" fill="#c79a3b" />
+            <circle cx="6" cy="6" r="2" fill="#8c1628" />
+          </svg>
+          <svg class="card-corner corner-br" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M 4 36 V 12 C 4 7.6 7.6 4 12 4 H 36" stroke="#c79a3b" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M 9 32 V 15 C 9 11.7 11.7 9 15 9 H 32" stroke="#8c1628" stroke-width="1" stroke-linecap="round"
+              stroke-dasharray="2 2" />
+            <circle cx="14" cy="14" r="2.5" fill="#c79a3b" />
+            <circle cx="6" cy="6" r="2" fill="#8c1628" />
+          </svg>
 
-        <!-- Traditional Card Header -->
-        <header class="bengali-card-header">
-          <div class="bengali-card-blessing">
-            <svg viewBox="0 0 64 64"><use href="#shankha"/></svg>
-            <span>॥ শ্রী শ্রী দুর্গা সহায় ॥</span>
-            <svg viewBox="0 0 64 64" style="transform:scaleX(-1)"><use href="#shankha"/></svg>
-          </div>
-          <h3 class="bengali-card-title">॥ পরিচিতি ॥</h3>
-          <p class="bengali-card-subtitle">পাত্র ও পাত্রী পরিচয় · The Bride &amp; Groom Lineage</p>
-        </header>
+          <!-- Traditional Card Header -->
+          <header class="bengali-card-header">
+            <div class="bengali-card-blessing">
+              <svg viewBox="0 0 64 64">
+                <use href="#shankha" />
+              </svg>
+              <span>॥ শ্রী শ্রী দুর্গা সহায় ॥</span>
+              <svg viewBox="0 0 64 64" style="transform:scaleX(-1)">
+                <use href="#shankha" />
+              </svg>
+            </div>
+            <h3 class="bengali-card-title">॥ পরিচিতি ॥</h3>
+            <p class="bengali-card-subtitle">পাত্র ও পাত্রী পরিচয় · The Bride &amp; Groom Lineage</p>
+          </header>
 
-        <!-- Card Body with Two Columns & Central Hanging Swastika Divider -->
-        <div class="bengali-card-body">
-          <!-- Groom Side (পাত্র) -->
-          <article class="card-col card-col--groom">
-            <div class="card-col-top">
-              <div class="card-avatar-frame">
-                <img src="boy.png" alt="Aviram Nath" class="card-avatar" width="64" height="64" loading="lazy">
+          <!-- Card Body with Two Columns & Central Hanging Swastika Divider -->
+          <div class="bengali-card-body">
+            <!-- Groom Side (পাত্র) -->
+            <article class="card-col card-col--groom">
+              <div class="card-col-top">
+                <div class="card-avatar-frame">
+                  <img src="boy.png" alt="Aviram Nath" class="card-avatar" width="64" height="64" loading="lazy">
+                </div>
+                <div class="card-col-info">
+                  <span class="card-badge">
+                    <svg>
+                      <use href="#topor" />
+                    </svg>
+                    বরপক্ষ · The Groom
+                  </span>
+                  <h4 class="card-col-heading">কল্যাণীয় অভিরাম</h4>
+                </div>
               </div>
-              <div class="card-col-info">
-                <span class="card-badge">
-                  <svg><use href="#topor"/></svg>
-                  বরপক্ষ · The Groom
-                </span>
-                <h4 class="card-col-heading">কল্যাণীয় অবিরাম</h4>
-              </div>
+
+              <table class="card-parichiti-table">
+                <tbody>
+                  <tr>
+                    <td class="card-lbl">পাত্র</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">কল্যাণীয় অভিরাম নাথ</span>
+                      <span class="card-val-sub">Aviram Nath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">পিতা</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">শ্রী উত্তম নাথ</span>
+                      <span class="card-val-sub">Sri Uttam Nath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">মাতা</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">শ্রীমতী পাপিয়া নাথ</span>
+                      <span class="card-val-sub">Smt. Papiya Nath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">নিবাস</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <div class="card-addr-lines">
+                        <p style="margin:0 0 2px"><b>গ্রাম:</b> ঘোষপাড়া &bull; <b>পোঃ</b> পুরাতন বনগাঁ</p>
+                        <p style="margin:0 0 2px"><b>থানা:</b> বনগাঁ &bull; <b>জেলা:</b> উত্তর ২৪ পরগণা</p>
+                        <p style="margin:0"><b>পিন কোড:</b> ৭৪৩২৩৫ (743235)</p>
+                      </div>
+                      <div class="card-addr-en">
+                        Vill: Ghoshpara, P.O: Puratan Bongaon, P.S: Bongaon, Dist: North 24 Parganas, PIN: 743235
+                      </div>
+                      <div class="card-actions">
+                        <a class="card-btn"
+                          href="https://www.google.com/maps/search/?api=1&query=Ghoshpara,+Puratan+Bongaon,+Bongaon,+North+24+Parganas,+743235"
+                          target="_blank" rel="noopener">
+                          <svg>
+                            <use href="#ico-ext" />
+                          </svg>
+                          <span>মানচিত্রে দেখুন</span>
+                        </a>
+                        <button class="card-btn card-btn--gold copy-btn" type="button"
+                          data-copy="গ্রাম: ঘোষপাড়া, পোঃ পুরাতন বনগাঁ, থানা: বনগাঁ, জেলা: উত্তর ২৪ পরগণা, পিন: ৭৪৩২৩৫ (Ghoshpara, Puratan Bongaon, Bongaon, North 24 Parganas - 743235)"
+                          data-label="বরের ঠিকানা কপি করা হয়েছে!">
+                          <svg>
+                            <use href="#ico-copy" />
+                          </svg>
+                          <span>ঠিকানা কপি</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <!-- Central Hanging Swastika Ornament (Desktop / Tablet) -->
+            <div class="card-center-divider" aria-hidden="true">
+              <svg viewBox="0 0 100 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Auspicious Swastika Motif -->
+                <g stroke="#8c1628" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M 50 14 L 50 46" />
+                  <path d="M 34 30 L 66 30" />
+                  <path d="M 50 14 L 66 14" />
+                  <path d="M 66 30 L 66 46" />
+                  <path d="M 50 46 L 34 46" />
+                  <path d="M 34 30 L 34 14" />
+                  <circle cx="42" cy="22" r="2" fill="#8c1628" stroke="none" />
+                  <circle cx="58" cy="22" r="2" fill="#8c1628" stroke="none" />
+                  <circle cx="42" cy="38" r="2" fill="#8c1628" stroke="none" />
+                  <circle cx="58" cy="38" r="2" fill="#8c1628" stroke="none" />
+                </g>
+                <!-- Horizontal ornamental bar -->
+                <line x1="16" y1="56" x2="84" y2="56" stroke="#c79a3b" stroke-width="2" stroke-linecap="round" />
+                <circle cx="50" cy="56" r="3" fill="#8c1628" />
+                <circle cx="16" cy="56" r="2.2" fill="#c79a3b" />
+                <circle cx="84" cy="56" r="2.2" fill="#c79a3b" />
+                <!-- 7 Graduated Hanging Bead Malas -->
+                <line x1="22" y1="56" x2="22" y2="105" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="22" cy="107" r="2.5" fill="#8c1628" />
+                <path d="M 19.5 109 Q 22 118 24.5 109 Z" fill="#c79a3b" />
+
+                <line x1="31" y1="56" x2="31" y2="135" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="31" cy="137" r="2.5" fill="#8c1628" />
+                <path d="M 28.5 139 Q 31 148 33.5 139 Z" fill="#c79a3b" />
+
+                <line x1="41" y1="56" x2="41" y2="170" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="41" cy="172" r="2.5" fill="#8c1628" />
+                <path d="M 38.5 174 Q 41 184 43.5 174 Z" fill="#c79a3b" />
+
+                <line x1="50" y1="56" x2="50" y2="205" stroke="#8c1628" stroke-width="1.4" stroke-dasharray="1 3" />
+                <circle cx="50" cy="207" r="3" fill="#8c1628" />
+                <path d="M 47 210 Q 50 222 53 210 Z" fill="#c79a3b" />
+
+                <line x1="59" y1="56" x2="59" y2="170" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="59" cy="172" r="2.5" fill="#8c1628" />
+                <path d="M 56.5 174 Q 59 184 61.5 174 Z" fill="#c79a3b" />
+
+                <line x1="69" y1="56" x2="69" y2="135" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="69" cy="137" r="2.5" fill="#8c1628" />
+                <path d="M 66.5 139 Q 69 148 71.5 139 Z" fill="#c79a3b" />
+
+                <line x1="78" y1="56" x2="78" y2="105" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3" />
+                <circle cx="78" cy="107" r="2.5" fill="#8c1628" />
+                <path d="M 75.5 109 Q 78 118 80.5 109 Z" fill="#c79a3b" />
+              </svg>
             </div>
 
-            <table class="card-parichiti-table">
-              <tbody>
-                <tr>
-                  <td class="card-lbl">পাত্র</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">কল্যাণীয় অবিরাম নাথ</span>
-                    <span class="card-val-sub">Aviram Nath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">পিতা</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">শ্রী উত্তম নাথ</span>
-                    <span class="card-val-sub">Sri Uttam Nath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">মাতা</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">শ্রীমতী পাপিয়া নাথ</span>
-                    <span class="card-val-sub">Smt. Papiya Nath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">নিবাস</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <div class="card-addr-lines">
-                      <p style="margin:0 0 2px"><b>গ্রাম:</b> ঘোষপাড়া &bull; <b>পোঃ</b> পুরাতন বনগাঁ</p>
-                      <p style="margin:0 0 2px"><b>থানা:</b> বনগাঁ &bull; <b>জেলা:</b> উত্তর ২৪ পরগণা</p>
-                      <p style="margin:0"><b>পিন কোড:</b> ৭৪৩২৩৫ (743235)</p>
-                    </div>
-                    <div class="card-addr-en">
-                      Vill: Ghoshpara, P.O: Puratan Bongaon, P.S: Bongaon, Dist: North 24 Parganas, PIN: 743235
-                    </div>
-                    <div class="card-actions">
-                      <a class="card-btn" href="https://www.google.com/maps/search/?api=1&query=Ghoshpara,+Puratan+Bongaon,+Bongaon,+North+24+Parganas,+743235" target="_blank" rel="noopener">
-                        <svg><use href="#ico-ext"/></svg>
-                        <span>মানচিত্রে দেখুন</span>
-                      </a>
-                      <button class="card-btn card-btn--gold copy-btn" type="button" data-copy="গ্রাম: ঘোষপাড়া, পোঃ পুরাতন বনগাঁ, থানা: বনগাঁ, জেলা: উত্তর ২৪ পরগণা, পিন: ৭৪৩২৩৫ (Ghoshpara, Puratan Bongaon, Bongaon, North 24 Parganas - 743235)" data-label="বরের ঠিকানা কপি করা হয়েছে!">
-                        <svg><use href="#ico-copy"/></svg>
-                        <span>ঠিকানা কপি</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
-
-          <!-- Central Hanging Swastika Ornament (Desktop / Tablet) -->
-          <div class="card-center-divider" aria-hidden="true">
-            <svg viewBox="0 0 100 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Auspicious Swastika Motif -->
-              <g stroke="#8c1628" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M 50 14 L 50 46" />
-                <path d="M 34 30 L 66 30" />
-                <path d="M 50 14 L 66 14" />
-                <path d="M 66 30 L 66 46" />
-                <path d="M 50 46 L 34 46" />
-                <path d="M 34 30 L 34 14" />
-                <circle cx="42" cy="22" r="2" fill="#8c1628" stroke="none" />
-                <circle cx="58" cy="22" r="2" fill="#8c1628" stroke="none" />
-                <circle cx="42" cy="38" r="2" fill="#8c1628" stroke="none" />
-                <circle cx="58" cy="38" r="2" fill="#8c1628" stroke="none" />
-              </g>
-              <!-- Horizontal ornamental bar -->
-              <line x1="16" y1="56" x2="84" y2="56" stroke="#c79a3b" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="50" cy="56" r="3" fill="#8c1628"/>
-              <circle cx="16" cy="56" r="2.2" fill="#c79a3b"/>
-              <circle cx="84" cy="56" r="2.2" fill="#c79a3b"/>
-              <!-- 7 Graduated Hanging Bead Malas -->
-              <line x1="22" y1="56" x2="22" y2="105" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="22" cy="107" r="2.5" fill="#8c1628"/>
-              <path d="M 19.5 109 Q 22 118 24.5 109 Z" fill="#c79a3b"/>
-
-              <line x1="31" y1="56" x2="31" y2="135" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="31" cy="137" r="2.5" fill="#8c1628"/>
-              <path d="M 28.5 139 Q 31 148 33.5 139 Z" fill="#c79a3b"/>
-
-              <line x1="41" y1="56" x2="41" y2="170" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="41" cy="172" r="2.5" fill="#8c1628"/>
-              <path d="M 38.5 174 Q 41 184 43.5 174 Z" fill="#c79a3b"/>
-
-              <line x1="50" y1="56" x2="50" y2="205" stroke="#8c1628" stroke-width="1.4" stroke-dasharray="1 3"/>
-              <circle cx="50" cy="207" r="3" fill="#8c1628"/>
-              <path d="M 47 210 Q 50 222 53 210 Z" fill="#c79a3b"/>
-
-              <line x1="59" y1="56" x2="59" y2="170" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="59" cy="172" r="2.5" fill="#8c1628"/>
-              <path d="M 56.5 174 Q 59 184 61.5 174 Z" fill="#c79a3b"/>
-
-              <line x1="69" y1="56" x2="69" y2="135" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="69" cy="137" r="2.5" fill="#8c1628"/>
-              <path d="M 66.5 139 Q 69 148 71.5 139 Z" fill="#c79a3b"/>
-
-              <line x1="78" y1="56" x2="78" y2="105" stroke="#8c1628" stroke-width="1.2" stroke-dasharray="1 3"/>
-              <circle cx="78" cy="107" r="2.5" fill="#8c1628"/>
-              <path d="M 75.5 109 Q 78 118 80.5 109 Z" fill="#c79a3b"/>
-            </svg>
-          </div>
-
-          <!-- Mobile Divider -->
-          <div class="card-mobile-divider" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none">
-              <g stroke="#8c1628" stroke-width="2.4" stroke-linecap="round">
-                <path d="M 20 8 L 20 32" />
-                <path d="M 8 20 L 32 20" />
-                <path d="M 20 8 L 32 8" />
-                <path d="M 32 20 L 32 32" />
-                <path d="M 20 32 L 8 32" />
-                <path d="M 8 20 L 8 8" />
-                <circle cx="14" cy="14" r="1.5" fill="#8c1628" stroke="none" />
-                <circle cx="26" cy="14" r="1.5" fill="#8c1628" stroke="none" />
-                <circle cx="14" cy="26" r="1.5" fill="#8c1628" stroke="none" />
-                <circle cx="26" cy="26" r="1.5" fill="#8c1628" stroke="none" />
-              </g>
-            </svg>
-          </div>
-
-          <!-- Bride Side (পাত্রী) -->
-          <article class="card-col card-col--bride">
-            <div class="card-col-top">
-              <div class="card-avatar-frame">
-                <img src="girl.png" alt="Monalisa Debnath" class="card-avatar" width="64" height="64" loading="lazy">
-              </div>
-              <div class="card-col-info">
-                <span class="card-badge">
-                  <svg><use href="#mukut"/></svg>
-                  কন্যাপক্ষ · The Bride
-                </span>
-                <h4 class="card-col-heading">কল্যাণীয়া মোনালিসা</h4>
-              </div>
+            <!-- Mobile Divider -->
+            <div class="card-mobile-divider" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none">
+                <g stroke="#8c1628" stroke-width="2.4" stroke-linecap="round">
+                  <path d="M 20 8 L 20 32" />
+                  <path d="M 8 20 L 32 20" />
+                  <path d="M 20 8 L 32 8" />
+                  <path d="M 32 20 L 32 32" />
+                  <path d="M 20 32 L 8 32" />
+                  <path d="M 8 20 L 8 8" />
+                  <circle cx="14" cy="14" r="1.5" fill="#8c1628" stroke="none" />
+                  <circle cx="26" cy="14" r="1.5" fill="#8c1628" stroke="none" />
+                  <circle cx="14" cy="26" r="1.5" fill="#8c1628" stroke="none" />
+                  <circle cx="26" cy="26" r="1.5" fill="#8c1628" stroke="none" />
+                </g>
+              </svg>
             </div>
 
-            <table class="card-parichiti-table">
-              <tbody>
-                <tr>
-                  <td class="card-lbl">পাত্রী</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">কল্যাণীয়া মোনালিসা দেবনাথ</span>
-                    <span class="card-val-sub">Monalisa Debnath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">পিতা</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">শ্রী মৃত্যুঞ্জয় দেবনাথ</span>
-                    <span class="card-val-sub">Sri Mrityunjay Debnath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">মাতা</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">শ্রীমতী কাকলী দেবনাথ</span>
-                    <span class="card-val-sub">Smt. Kakali Debnath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">ভ্রাতা</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <span class="card-val-name">শ্রীমান মৃন্ময় দেবনাথ</span>
-                    <span class="card-val-sub">Sri Mrinmoy Debnath</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="card-lbl">নিবাস</td>
-                  <td class="card-sep">:</td>
-                  <td class="card-val">
-                    <div class="card-addr-lines">
-                      <p style="margin:0 0 2px"><b>গ্রাম:</b> ভবানীপুর &bull; <b>পোঃ</b> পুরাতন বনগাঁ</p>
-                      <p style="margin:0 0 2px"><b>থানা:</b> পেট্রাপোল &bull; <b>জেলা:</b> উত্তর ২৪ পরগণা</p>
-                      <p style="margin:0"><b>পিন কোড:</b> ৭৪৩২৩৫ (743235)</p>
-                    </div>
-                    <div class="card-addr-en">
-                      Vill: Bhabanipur, P.O: Puratan Bongaon, P.S: Petrapole, Dist: North 24 Parganas, PIN: 743235
-                    </div>
-                    <div class="card-actions">
-                      <a class="card-btn" href="https://www.google.com/maps/search/?api=1&query=Bhabanipur,+Puratan+Bongaon,+Petrapole,+North+24+Parganas,+743235" target="_blank" rel="noopener">
-                        <svg><use href="#ico-ext"/></svg>
-                        <span>মানচিত্রে দেখুন</span>
-                      </a>
-                      <button class="card-btn card-btn--gold copy-btn" type="button" data-copy="গ্রাম: ভবানীপুর, পোঃ পুরাতন বনগাঁ, থানা: পেট্রাপোল, জেলা: উত্তর ২৪ পরগণা, পিন: ৭৪৩২৩৫ (Bhabanipur, Puratan Bongaon, Petrapole, North 24 Parganas - 743235)" data-label="কন্যার ঠিকানা কপি করা হয়েছে!">
-                        <svg><use href="#ico-copy"/></svg>
-                        <span>ঠিকানা কপি</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </article>
+            <!-- Bride Side (পাত্রী) -->
+            <article class="card-col card-col--bride">
+              <div class="card-col-top">
+                <div class="card-avatar-frame">
+                  <img src="girl.png" alt="Monalisa Debnath" class="card-avatar" width="64" height="64" loading="lazy">
+                </div>
+                <div class="card-col-info">
+                  <span class="card-badge">
+                    <svg>
+                      <use href="#mukut" />
+                    </svg>
+                    কন্যাপক্ষ · The Bride
+                  </span>
+                  <h4 class="card-col-heading">কল্যাণীয়া মোনালিসা</h4>
+                </div>
+              </div>
+
+              <table class="card-parichiti-table">
+                <tbody>
+                  <tr>
+                    <td class="card-lbl">পাত্রী</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">কল্যাণীয়া মোনালিসা দেবনাথ</span>
+                      <span class="card-val-sub">Monalisa Debnath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">পিতা</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">শ্রী মৃত্যুঞ্জয় দেবনাথ</span>
+                      <span class="card-val-sub">Sri Mrityunjay Debnath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">মাতা</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">শ্রীমতী কাকলী দেবনাথ</span>
+                      <span class="card-val-sub">Smt. Kakali Debnath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">ভ্রাতা</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <span class="card-val-name">শ্রীমান মৃন্ময় দেবনাথ</span>
+                      <span class="card-val-sub">Sri Mrinmoy Debnath</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="card-lbl">নিবাস</td>
+                    <td class="card-sep">:</td>
+                    <td class="card-val">
+                      <div class="card-addr-lines">
+                        <p style="margin:0 0 2px"><b>গ্রাম:</b> ভবানীপুর &bull; <b>পোঃ</b> পুরাতন বনগাঁ</p>
+                        <p style="margin:0 0 2px"><b>থানা:</b> পেট্রাপোল &bull; <b>জেলা:</b> উত্তর ২৪ পরগণা</p>
+                        <p style="margin:0"><b>পিন কোড:</b> ৭৪৩২৩৫ (743235)</p>
+                      </div>
+                      <div class="card-addr-en">
+                        Vill: Bhabanipur, P.O: Puratan Bongaon, P.S: Petrapole, Dist: North 24 Parganas, PIN: 743235
+                      </div>
+                      <div class="card-actions">
+                        <a class="card-btn"
+                          href="https://www.google.com/maps/search/?api=1&query=Bhabanipur,+Puratan+Bongaon,+Petrapole,+North+24+Parganas,+743235"
+                          target="_blank" rel="noopener">
+                          <svg>
+                            <use href="#ico-ext" />
+                          </svg>
+                          <span>মানচিত্রে দেখুন</span>
+                        </a>
+                        <button class="card-btn card-btn--gold copy-btn" type="button"
+                          data-copy="গ্রাম: ভবানীপুর, পোঃ পুরাতন বনগাঁ, থানা: পেট্রাপোল, জেলা: উত্তর ২৪ পরগণা, পিন: ৭৪৩২৩৫ (Bhabanipur, Puratan Bongaon, Petrapole, North 24 Parganas - 743235)"
+                          data-label="কন্যার ঠিকানা কপি করা হয়েছে!">
+                          <svg>
+                            <use href="#ico-copy" />
+                          </svg>
+                          <span>ঠিকানা কপি</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
   <div class="paar paar--thin" aria-hidden="true"></div>
